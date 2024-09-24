@@ -5,7 +5,7 @@ export default async function TransformToString(req: Request , res: Response) {
     try {
         const { htmlString } = req.body;
 
-        console.log('URL DEL NAVEGADOR',await Chromium.executablePath);
+        console.log('URL DEL NAVEGADOR',await Chromium);
 
         const navegador = await Chromium.puppeteer.launch({
             args: Chromium.args,
