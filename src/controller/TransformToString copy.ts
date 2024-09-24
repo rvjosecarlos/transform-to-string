@@ -2,7 +2,7 @@ import { Request, Response } from "express"
 import Chromium from "chrome-aws-lambda";
 import { exec } from "child_process";
 
-export default async function TransformToString(req: Request , res: Response) {
+export default async function TransformToStringOriginal(req: Request , res: Response) {
     try {
 
         /*
