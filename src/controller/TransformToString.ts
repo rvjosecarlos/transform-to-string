@@ -13,12 +13,20 @@ export default async function TransformToString(req: Request , res: Response) {
             console.log(`Contenido de ls SOLITO: ${stdout}`);
           });
 
-        exec('ls /opt/render/.cache/puppeteer', (err, stdout, stderr) => {
+        exec('ls .cache/puppeteer', (err, stdout, stderr) => {
+            if (err) {
+              console.error(`Error al listar directorios de cache pupi: ${err}`);
+              return;
+            }
+            console.log(`Contenido de .cache/puppeteer: ${stdout}`);
+          });
+
+          exec('ls .cache/', (err, stdout, stderr) => {
             if (err) {
               console.error(`Error al listar directorios: ${err}`);
               return;
             }
-            console.log(`Contenido de /opt/render/.cache/puppeteer: ${stdout}`);
+            console.log(`Contenido de cache solito: ${stdout}`);
           });
 
         const { htmlString } = req.body;
