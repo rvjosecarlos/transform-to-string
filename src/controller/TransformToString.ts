@@ -1,6 +1,7 @@
+import { Request, Response } from "express"
 import puppeteer from "puppeteer";
 
-export default async function TransformToString(req, res) {
+export default async function TransformToString(req: Request , res: Response) {
     try {
         const { htmlString } = req.body;
 

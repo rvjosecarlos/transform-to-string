@@ -3,7 +3,11 @@
         "outDir": "./dist",
         "rootDir": "./src",
         "esModuleInterop": true,
-        "declaration": true
+        "declaration": true,
+        "target": "ES6",
+        "module": "commonjs",
+        "strict": true,
+        "skipLibCheck": true,
     },
     "include": ["src/**/*.ts"],
 }
