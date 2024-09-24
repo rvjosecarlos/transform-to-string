@@ -23,7 +23,7 @@ export default async function TransformToString(req: Request , res: Response) {
           });
           */
 
-          exec('ls -la .cache/puppeter/chorme', (err, stdout, stderr) => {
+          exec('ls -la .cache/puppeteer/chrome/linux-129.0.6668.58', (err, stdout, stderr) => {
             if (err) {
               console.error(`Error al listar directorios: ${err}`);
               return;
@@ -43,7 +43,7 @@ export default async function TransformToString(req: Request , res: Response) {
                 '--disable-setuid-sandbox'
             ],
             defaultViewport: Chromium.defaultViewport,
-            executablePath: '/.cache/puppeteer/chrome',
+            executablePath: '/.cache/puppeteer/chrome/linux-129.0.6668.58/chrome-linux64/chrome',
             headless: true,
           });
         console.log(navegador);
