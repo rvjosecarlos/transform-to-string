@@ -18,6 +18,7 @@ export default async function TransformToString(req: Request , res: Response) {
         return res.json({success: true, data: pdfBase64});
     }
     catch(error) {
+        console.log(error);
         return res.json({success: false, error: 'Error al convertir'});
     }
 }
