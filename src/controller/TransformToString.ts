@@ -41,7 +41,7 @@ export default async function TransformToString(req: Request , res: Response) {
                 '--disable-setuid-sandbox'
             ],
             defaultViewport: Chromium.defaultViewport,
-            executablePath: '/opt/render/.cache/puppeteer/chrome',
+            executablePath: '.cache/puppeteer/chrome',
             headless: true,
           });
         console.log(navegador);
