@@ -7,15 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec ts-node ./src/index.ts",
     "build": "tsc",
-    "start": "node ./dist/index.js",
-    "postinstall": "npx playwright install"
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chrome-aws-lambda": "^9.1.0",
     "express": "^4.21.0",
-    "playwright": "^1.47.2",
     "puppeteer-core": "^23.4.0"
   },
   "devDependencies": {
