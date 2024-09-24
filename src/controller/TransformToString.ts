@@ -10,7 +10,7 @@ export default async function TransformToString(req: Request , res: Response) {
               console.error(`Error al listar directorios: ${err}`);
               return;
             }
-            console.log(`Contenido de /opt/render/.cache/puppeteer: ${stdout}`);
+            console.log(`Contenido de ls SOLITO: ${stdout}`);
           });
 
         exec('ls /opt/render/.cache/puppeteer', (err, stdout, stderr) => {
