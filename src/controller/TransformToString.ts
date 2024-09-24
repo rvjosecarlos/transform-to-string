@@ -15,7 +15,7 @@ export default async function TransformToString(req: Request , res: Response) {
         const paginaWeb = await navegador.newPage();
         await paginaWeb.setContent(htmlString, { waitUntil: 'domcontentloaded' });
         const pdf = await paginaWeb.pdf({
-            format: 'A4',
+            format: 'a4',
             printBackground: true,
             margin: {
                 top: '20mm',
