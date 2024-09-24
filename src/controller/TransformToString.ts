@@ -5,12 +5,13 @@ export default async function TransformToString(req: Request , res: Response) {
     try {
         const { htmlString } = req.body;
 
-        console.log('URL DEL NAVEGADOR',await Chromium);
+        console.log('CHROMIUM',await Chromium);
+        console.log('URL DEL NAVEGADOR', await Chromium.executablePath, await Chromium.args);
 
         const navegador = await Chromium.puppeteer.launch({
             args: Chromium.args,
             defaultViewport: Chromium.defaultViewport,
-            executablePath: await Chromium.executablePath,
+            executablePath: '/opt/render/.cache/puppeteer/chrome-headless-shell/linux-129.0.6668.58/chrome-headless-shell-linux64/chrome-headless-shel',
             headless: Chromium.headless,
           });
         console.log(navegador);
