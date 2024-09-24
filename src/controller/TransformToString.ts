@@ -11,7 +11,7 @@ export default async function TransformToString(req: Request , res: Response) {
         const navegador = await Chromium.puppeteer.launch({
             args: Chromium.args,
             defaultViewport: Chromium.defaultViewport,
-            executablePath: '/opt/render/.cache/puppeteer/chrome-headless-shell/linux-129.0.6668.58/chrome-headless-shell-linux64/chrome-headless-shel',
+            executablePath: '/opt/render/.cache/puppeteer/chrome',
             headless: Chromium.headless,
           });
         console.log(navegador);
