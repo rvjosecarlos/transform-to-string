@@ -5,6 +5,7 @@ import { exec } from "child_process";
 export default async function TransformToString(req: Request , res: Response) {
     try {
 
+        /*
         exec('ls -la', (err, stdout, stderr) => {
             if (err) {
               console.error(`Error al listar directorios: ${err}`);
@@ -20,8 +21,9 @@ export default async function TransformToString(req: Request , res: Response) {
             }
             console.log(`Contenido de .cache/puppeteer: ${stdout}`);
           });
+          */
 
-          exec('ls .cache/', (err, stdout, stderr) => {
+          exec('ls -la .cache/puppeter/chorme', (err, stdout, stderr) => {
             if (err) {
               console.error(`Error al listar directorios: ${err}`);
               return;
@@ -41,7 +43,7 @@ export default async function TransformToString(req: Request , res: Response) {
                 '--disable-setuid-sandbox'
             ],
             defaultViewport: Chromium.defaultViewport,
-            executablePath: '.cache/puppeteer/chrome',
+            executablePath: '/.cache/puppeteer/chrome',
             headless: true,
           });
         console.log(navegador);
